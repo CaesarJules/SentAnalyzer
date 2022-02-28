@@ -31,12 +31,14 @@ def get_results(dataset, url):
     df['status'] = np.array(spam_status)
     df['sentiment'] = np.array(sentiment_result)
 
-    return df
+    return df[['review','sentiment', 'verified', 'status']]
     
 
 def display_updated_layout(dataset, count_results, colors, c2, c3, fig):
     fig.update_layout(
         overwrite = True,
+        width = 800,
+        height= 600
     )
 
     result = dict(dataset['sentiment'].value_counts(sort=False))
@@ -48,10 +50,10 @@ def display_updated_layout(dataset, count_results, colors, c2, c3, fig):
     elif result['Negative']>result['Positive']:
         c2.warning("### Oups, you should improve your product! &nbsp;The majority of people didn't like it &nbsp;😔")
     else:
-        pass
+        c2.info("### Oups, you should improve your product! &nbsp;The majority of people had a neutral review on your product &nbsp;😶")
 
     fig.add_trace(go.Pie(labels=x, values=y, hole=.3, 
-    marker_colors=['rgb(255, 153, 51)', 'rgb(51, 255, 255)']))
+    marker_colors=['rgb(255, 153, 51)', 'rgb(179, 55, 237)', 'rgb(51, 255, 255)']))
     c2.text("")
     c2.text("")
     c2.subheader("Multiple Reviews Analysis")

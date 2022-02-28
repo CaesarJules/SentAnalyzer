@@ -16,8 +16,8 @@ from functions import *
 url="http://44.202.42.66:8000/api/status/"
 #Get the current file's directory
 path = os.path.dirname(__file__)
-filepath = os.path.join(path, 'data/sample_annotated.csv')
-logo = os.path.join(path, 'data/logo.png')
+filepath = os.path.join(path, '../data/sample_annotated.csv')
+logo = os.path.join(path, '../data/plots/logo.png')
 st.set_page_config(page_title='Reviews Pundit', page_icon = logo, layout = 'wide', initial_sidebar_state = 'auto')
 
 fig = go.Figure()
@@ -150,7 +150,7 @@ elif len(single_review.strip())>0:
     elif result=="Negative":
         st.warning("## Try improving your product! You got a Negative Review  &nbsp;😔")
     else:
-        pass
+        st.info("### Oups, you should improve your product! &nbsp;You got a neutral review &nbsp;😶")
     
 else:
     col2.subheader(" ⬅ Please enter product reviews, or use one of the sample dataset(s) proposed above.")

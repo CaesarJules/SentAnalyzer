@@ -1,7 +1,7 @@
 <!-- Add banner here -->
 
-# Customer Reviews Spam Classifier
-This is a web application that classify single/many input customer reviews for being either fake(spam) or real(non-spam), with an extra functionality to filter out `unverified` customers' reviews.<br><br />
+# Reviews Pundit
+This is a web application that analyze(classify) single/many input customer reviews sentiment, with an extra functionality to filter out `fake(spam)` reviews.<br><br />
 The application can be accessed [**here**](https://spamclassifier11.herokuapp.com/).
 # Demo-Preview
 ![Demo](./data/plots/demo.png "Demo")

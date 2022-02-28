@@ -28,7 +28,7 @@ st.text("")
 expander_bar = st.expander("About")
 expander_bar.markdown("""
 ##### This app analyzes the *sentiment* expressed in input reviews and filter *spams*.
-* **EDA and Model Development Details :** [Github](https://github.com/CaesarJules/SpamClassifier).
+* **EDA and Model Development Details :** [Github](https://github.com/CaesarJules/SentAnalyzer).
 * **Sample dataset source :** [TensorFlow Datasets](https://www.tensorflow.org/datasets/catalog/amazon_us_reviews#amazon_us_reviewspc_v1_00).
 * **Python libraries used:** streamlit, pandas, numpy, requests, plotly, time, os, matplotlib.
 """)

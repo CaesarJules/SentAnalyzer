@@ -26,7 +26,7 @@ This [**Sentiment Analyzer**](https://reviewspundit.herokuapp.com/) application 
   - #### Feature Extraction
   Given that I wanted to use Hugging Face's pre-trained transformers like `DistilBert` due to its simplicity as well as cheap cost, I tokenized the reviews with the `'distilbert-base-uncased'` tokenizer. Nevertheless, I later used the `CountVectorizer` for classic ML models.
   - #### Benchmarking
-    - I first loaded a pre-trained TensorFlow `'distilbert-base-uncased'` model, and using `40%` of the dataset for `training`, `20%` for `cross-validation`, and `20%` for `testing`, I fit the model with 2 epochs, resulting in an overall `77.16%` accuracy score. <br><br />
+    - I first loaded a pre-trained TensorFlow `'distilbert-base-uncased'` model, and using `60%` of the dataset for `training`, `20%` for `cross-validation`, and `20%` for `testing`, I fit the model with 2 epochs, resulting in an overall `77.16%` accuracy score. <br><br />
       ![Classification Report](./data/plots/cr_BERT.png "C.R.") <br><br />
       **Confusion Matrix** <br><br />
       ![Confusion Matrix](./data/plots/cm_BERT.png "C.M.")
